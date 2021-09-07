@@ -1,0 +1,288 @@
+D:\university\2\My>git init
+Initialized empty Git repository in D:/university/2/My/.git/
+
+D:\university\2\My>git status
+On branch master
+
+No commits yet
+
+nothing to commit (create/copy files and use "git add" to track)
+
+D:\university\2\My>git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        lab01.html
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+D:\university\2\My>git add .
+
+D:\university\2\My>git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   lab01.html
+
+D:\university\2\My>git commit
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'asyal@DESKTOP-4NVGH2P.(none)')
+
+D:\university\2\My>git config --global user.email "a.radyvonenko@gmail.com"
+
+D:\university\2\My>git config --global user.name "Anastasiia"
+
+D:\university\2\My>git commit -m "initial commit"
+[master (root-commit) 2441005] initial commit
+ 1 file changed, 26 insertions(+)
+ create mode 100644 lab01.html
+
+D:\university\2\My>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\university\2\My>git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   lab01.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+D:\university\2\My>git -am "updated"
+unknown option: -am
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+D:\university\2\My>git commit -am 'typo resolved'
+fatal: paths 'resolved' ...' with -a does not make sense
+
+D:\university\2\My>git commit -am "typo resolved"
+[master a7530c6] typo resolved
+ 1 file changed, 1 insertion(+)
+
+D:\university\2\My>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\university\2\My>git log
+commit a7530c6a2012b53b7b1ccb5d9c533298be64548a (HEAD -> master)
+Author: Anastasiia <a.radyvonenko@gmail.com>
+Date:   Tue Sep 7 10:35:46 2021 +0300
+
+    typo resolved
+
+commit 244100585e8b0ed756b16bc9682a502495560ac8
+Author: Anastasiia <a.radyvonenko@gmail.com>
+Date:   Tue Sep 7 10:32:48 2021 +0300
+
+    initial commit
+
+D:\university\2\My>git --graph --oneline --all
+unknown option: --graph
+usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--super-prefix=<path>] [--config-env=<name>=<envvar>]
+           <command> [<args>]
+
+D:\university\2\My>gitk
+
+D:\university\2\My>git show
+commit a7530c6a2012b53b7b1ccb5d9c533298be64548a (HEAD -> master)
+Author: Anastasiia <a.radyvonenko@gmail.com>
+Date:   Tue Sep 7 10:35:46 2021 +0300
+
+    typo resolved
+
+diff --git a/lab01.html b/lab01.html
+index 7a0d49e..5c6f730 100644
+--- a/lab01.html
++++ b/lab01.html
+@@ -15,6 +15,7 @@
+     <p1>Anastasiia Radyvonenko</p1>
+
+     <h2>My education:</h2>
++       <h3>lyceum 157</h3>
+
+
+D:\university\2\My>git branch lab0
+
+D:\university\2\My>git status
+On branch master
+nothing to commit, working tree clean
+
+D:\university\2\My>git chckout lab0
+git: 'chckout' is not a git command. See 'git --help'.
+
+The most similar command is
+        checkout
+
+D:\university\2\My>git checkout lab0
+Switched to branch 'lab0'
+
+D:\university\2\My>git status
+On branch lab0
+nothing to commit, working tree clean
+
+D:\university\2\My>git commit -am 'lab0 first commit'
+fatal: paths 'first ...' with -a does not make sense
+
+D:\university\2\My>git add .
+
+D:\university\2\My>git commit
+[lab0 031977b] XC:wc
+ 1 file changed, 1 insertion(+)
+
+D:\university\2\My>git status
+On branch lab0
+nothing to commit, working tree clean
+
+D:\university\2\My>git merge master
+Already up to date.
+
+D:\university\2\My>gitk
+
+D:\university\2\My>git commit --amend -m "file updated"
+[lab0 48ffdc3] file updated
+ Date: Tue Sep 7 11:10:40 2021 +0300
+ 1 file changed, 1 insertion(+)
+
+D:\university\2\My>gitk
+
+D:\university\2\My>git status
+On branch lab0
+nothing to commit, working tree clean
+
+D:\university\2\My>git log
+commit 48ffdc3731ccd0d775143e792080277103995c22 (HEAD -> lab0)
+Author: Anastasiia <a.radyvonenko@gmail.com>
+Date:   Tue Sep 7 11:10:40 2021 +0300
+
+    file updated
+
+commit 95aa7852bac038f0c23150ba6aceb3c0bfd9950a
+Author: Anastasiia <a.radyvonenko@gmail.com>
+Date:   Tue Sep 7 10:57:09 2021 +0300
+
+    initial commit lab0`
+
+commit a7530c6a2012b53b7b1ccb5d9c533298be64548a (master)
+Author: Anastasiia <a.radyvonenko@gmail.com>
+Date:   Tue Sep 7 10:35:46 2021 +0300
+
+    typo resolved
+
+commit 244100585e8b0ed756b16bc9682a502495560ac8
+Author: Anastasiia <a.radyvonenko@gmail.com>
+Date:   Tue Sep 7 10:32:48 2021 +0300
+
+    initial commit
+
+D:\university\2\My>git remote add origin https://github.com/iamasya/my-repository
+
+D:\university\2\My>git push -u origin lab0
+info: please complete authentication in your browser...
+Enumerating objects: 12, done.
+Counting objects: 100% (12/12), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (12/12), 1.25 KiB | 320.00 KiB/s, done.
+Total 12 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/iamasya/my-repository
+ * [new branch]      lab0 -> lab0
+Branch 'lab0' set up to track remote branch 'lab0' from 'origin'.
+
+D:\university\2\My>
+D:\university\2\My>
+D:\university\2\My>git status
+On branch lab0
+Your branch is up to date with 'origin/lab0'.
+
+nothing to commit, working tree clean
+
+D:\university\2\My>git diff origin
+fatal: ambiguous argument 'origin': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+
+D:\university\2\My>git diff
+
+D:\university\2\My>git fetch
+
+D:\university\2\My>git status
+On branch lab0
+Your branch is up to date with 'origin/lab0'.
+
+nothing to commit, working tree clean
+
+D:\university\2\My>git pull
+Already up to date.
+
+D:\university\2\My>git diff
+diff --git a/lb.txt b/lb.txt
+index 1ac9676..59e1f3f 100644
+--- a/lb.txt
++++ b/lb.txt
+@@ -1,2 +1,2 @@
+ text file for lab0
+-lala
+\ No newline at end of file
++lll
+\ No newline at end of file
+
+D:\university\2\My>git fetch
+
+D:\university\2\My>git commit -m "new commit"
+[lab0 de58e65] new commit
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+D:\university\2\My>git push origin
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 297 bytes | 297.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/iamasya/my-repository
+   48ffdc3..de58e65  lab0 -> lab0
+
+D:\university\2\My>git status
+On branch lab0
+Your branch is up to date with 'origin/lab0'.
+
+nothing to commit, working tree clean
+
+D:\university\2\My>gitk
+
+D:\university\2\My>git status
+On branch lab0
+Your branch is up to date with 'origin/lab0'.
+
+nothing to commit, working tree clean
+
+D:\university\2\My>
