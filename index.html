@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musical Instruments</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" 
+    rel="stylesheet"> 
+    <script src="main.js" async></script>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="logo.png" width="200px">
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#product">Products</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#cart"><img src="cart.png" width="30px" height="30px"></a></li>
+                    </ul>
+                </nav>   
+                
+            </div>
+        </div>
+
+        <section id="home" class="wall">
+            <img src="pianowall.jpg" width="1500px" height="900px">
+        </section>
+        <section id="about" class="row">
+            <div class="front">
+                <h1>Welcome to our<br>Music Store!</h1>
+                <p>We are an online store of musical instruments.<br>Shop our selection of instruments.<br> 
+                Get the lowest prices & free shipping on most orders.<br> Check back daily for special savings.</p>
+            </div>
+            <div class="front">
+                <img src="solo.png">
+            </div>
+        </section>
+    </div>
+    <section id="product" class="categories">
+        <div class="small-container">
+            <h2 class="title">Our Products</h2>
+            <div class="row">
+                <div class="photo">
+                    <img class="image" src="piano.jpg">
+                    <h4 class="shop-item-title">Yamaha Black Piano</h4>
+                    <p class="shop-price">₴100.000</p>
+                    <input type="number" value="1">
+                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
+                </div>
+                <div class="photo">
+                    <img class="image" src="guitar.jpg">
+                    <h4 class="shop-item-title">Fender Acoustic Guitar</h4>
+                    <p class="shop-price">₴5.000</p>
+                    <input type="number" value="1">
+                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
+                </div>
+                <div class="photo">
+                    <img class="image" src="drums.jpg">
+                    <h4 class="shop-item-title">Alesis Turbo Drums Kit</h4>
+                    <p class="shop-price">₴10.000</p>
+                    <input type="number" value="1">
+                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
+                </div>
+                <div class="photo">
+                    <img class="image" src="elguitar.jpg">
+                    <h4 class="shop-item-title">Harley Benton Electric Guitar</h4>
+                    <p class="shop-price">₴8.800</p>
+                    <input type="number" value="1">
+                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+	<section id="cart" class="container content-section">
+        <h2 class="section-header">Cart</h2>
+        <div class="cart-row">
+            <span class="cart-item cart-header cart-column">Item</span>
+            <span class="cart-price cart-header cart-column">Price</span>
+            <span class="cart-quantity cart-header cart-column">Quantity</span>
+        </div>
+        <div class="cart-items">
+        </div>
+        <div class="cart-total">
+            <strong class="cart-total-title">Subtotal</strong>
+            <span class="cart-total-price">0 ₴</span>
+        </div>
+        <button class="btn btn-primary btn-purchase" type="button">Purchase</button>
+    </section>
+
+    <div class="feedback">
+        <div class="small-container">
+            <h2 class="title">Feedbacks from our buyers</h2>
+            <div class="row">
+                <div class="photo">
+                    <p>"A good, quality upright piano that will delight you with music for years to come if used properly. 
+                        If you are bored with the same sound, then feel free to connect to a PC, download libraries, customize for yourself.
+                    A good choice!" </p>
+                    <img src="image2.jpg">
+                    <h3>Alice Fard</h3>
+                </div>
+                <div class="photo">
+                    <p>"I bought a drums kit and it is simply gorgeous, the sound is super, 
+                    so much joy has not been there for a long time. I am a beginner, but it will also be perfect for the pros. 
+                    I recommend!" </p>
+                    <img src="image3.jpg">
+                    <h3>Emily Asprin</h3>
+                </div>
+                <div class="photo">
+                    <p>"I have long wanted to learn how to play some instrument, I chose this guitar and have no regrets! Sounding at a height, not even a professional ear heard the difference! 
+                    I recommend everyone to buy it!" </p>
+                    <img src="image1.jpg">
+                    <h3>Adam Cooper</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="copyright">
+                <p>&copy; Anastasiia Radyvonenko 2021</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
