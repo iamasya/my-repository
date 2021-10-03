@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap" 
     rel="stylesheet"> 
-    <script src="main.js" async></script>
+    <script src="index.js" async></script>
 </head>
 
 <body>
@@ -19,14 +19,18 @@
         <div class="container">
             <div class="navbar">
                 <div class="logo">
-                    <img src="logo.png" width="200px">
+                    <img src="images/logo.png" width="200px">
                 </div>
                 <nav>
-                    <ul>
+                    <ul class="nav-list">
                         <li><a href="#home">Home</a></li>
                         <li><a href="#product">Products</a></li>
                         <li><a href="#about">About</a></li>
-                        <li><a href="#cart"><img src="cart.png" width="30px" height="30px"></a></li>
+                        <li class="cart">
+                            <a href="cart.html">
+                              <ion-icon name="cart-outline"></ion-icon>Cart <span>0</span>
+                            </a>
+                          </li>
                     </ul>
                 </nav>   
                 
@@ -34,7 +38,7 @@
         </div>
 
         <section id="home" class="wall">
-            <img src="pianowall.jpg" width="1500px" height="900px">
+            <img src="images/pianowall.jpg" width="1500px" height="900px">
         </section>
         <section id="about" class="row">
             <div class="front">
@@ -43,63 +47,50 @@
                 Get the lowest prices & free shipping on most orders.<br> Check back daily for special savings.</p>
             </div>
             <div class="front">
-                <img src="solo.png">
+                <img src="images/solo.png">
             </div>
         </section>
     </div>
-    <section id="product" class="categories">
-        <div class="small-container">
-            <h2 class="title">Our Products</h2>
-            <div class="row">
-                <div class="photo">
-                    <img class="image" src="piano.jpg">
-                    <h4 class="shop-item-title">Yamaha Black Piano</h4>
-                    <p class="shop-price">₴100.000</p>
-                    <input type="number" value="1">
-                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
-                </div>
-                <div class="photo">
-                    <img class="image" src="guitar.jpg">
-                    <h4 class="shop-item-title">Fender Acoustic Guitar</h4>
-                    <p class="shop-price">₴5.000</p>
-                    <input type="number" value="1">
-                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
-                </div>
-                <div class="photo">
-                    <img class="image" src="drums.jpg">
-                    <h4 class="shop-item-title">Alesis Turbo Drums Kit</h4>
-                    <p class="shop-price">₴10.000</p>
-                    <input type="number" value="1">
-                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
-                </div>
-                <div class="photo">
-                    <img class="image" src="elguitar.jpg">
-                    <h4 class="shop-item-title">Harley Benton Electric Guitar</h4>
-                    <p class="shop-price">₴8.800</p>
-                    <input type="number" value="1">
-                    <button class="btn btn-primary shop-item-button" type="button">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    
 
-	<section id="cart" class="container content-section">
-        <h2 class="section-header">Cart</h2>
-        <div class="cart-row">
-            <span class="cart-item cart-header cart-column">Item</span>
-            <span class="cart-price cart-header cart-column">Price</span>
-            <span class="cart-quantity cart-header cart-column">Quantity</span>
+    <div id="product" class="container-products">
+        <div class="image">
+            <img src="images/piano.jpg" alt="p1">
+            <h3>Yamaha Black Piano</h3>
+            <p>₴100.000</p>
+            <a class="add-cart cart1" href="#">Add to Cart</a>
         </div>
-        <div class="cart-items">
+        <div class="image">
+            <img src="images/guitar.jpg" alt="p1">
+            <h3>Fender Acoustic Guitar</h3>
+            <p>₴8.000</p>
+            <a class="add-cart cart2" href="#">Add to Cart</a>
         </div>
-        <div class="cart-total">
-            <strong class="cart-total-title">Subtotal</strong>
-            <span class="cart-total-price">0 ₴</span>
+        <div class="image">
+            <img src="images/drums.jpg" alt="p1">
+            <h3>Alesis Turbo Drums Kit</h3>
+            <p>₴10.000</p>
+            <a class="add-cart cart3" href="#">Add to Cart</a>
         </div>
-        <button class="btn btn-primary btn-purchase" type="button">Purchase</button>
-    </section>
-
+        <div class="image">
+            <img src="images/electricguitar.jpg" alt="p1">
+            <h3>Harley Benton Electric Guitar</h3>
+            <p>₴8.800</p>
+            <a class="add-cart cart4" href="#">Add to Cart</a>
+        </div>
+        <div class="image">
+            <img src="images/kalimba.jpg" alt="p1">
+            <h3>Kalimba</h3>
+            <p>₴800</p>
+            <a class="add-cart cart5" href="#">Add to Cart</a>
+        </div>
+        <div class="image">
+            <img src="images/violin.jpg" alt="p1">
+            <h3>Violin</h3>
+            <p>₴9.000</p>
+            <a class="add-cart cart6" href="#">Add to Cart</a>
+        </div>
+    </div>
+ 
     <div class="feedback">
         <div class="small-container">
             <h2 class="title">Feedbacks from our buyers</h2>
@@ -108,20 +99,20 @@
                     <p>"A good, quality upright piano that will delight you with music for years to come if used properly. 
                         If you are bored with the same sound, then feel free to connect to a PC, download libraries, customize for yourself.
                     A good choice!" </p>
-                    <img src="image2.jpg">
+                    <img src="images/image2.jpg">
                     <h3>Alice Fard</h3>
                 </div>
                 <div class="photo">
                     <p>"I bought a drums kit and it is simply gorgeous, the sound is super, 
                     so much joy has not been there for a long time. I am a beginner, but it will also be perfect for the pros. 
                     I recommend!" </p>
-                    <img src="image3.jpg">
+                    <img src="images/image3.jpg">
                     <h3>Emily Asprin</h3>
                 </div>
                 <div class="photo">
                     <p>"I have long wanted to learn how to play some instrument, I chose this guitar and have no regrets! Sounding at a height, not even a professional ear heard the difference! 
                     I recommend everyone to buy it!" </p>
-                    <img src="image1.jpg">
+                    <img src="images/image1.jpg">
                     <h3>Adam Cooper</h3>
                 </div>
             </div>
@@ -135,6 +126,10 @@
             </div>
         </div>
     </footer>
+    <!-- Custom Scripts -->
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
